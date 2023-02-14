@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Liste des annonces</title>
+</head>
+<body>
+    <h1>Liste des annonces :</h1>
+    <table>
+        <thead>
+            <th>Titre</th>
+            <th>Prix</th>
+            <th>Téléphone</th>
+            <th>URL</th>
+        </thead>
+        <tbody>
+            {% for annoncesCopy in annonces_copy %}
+                <tr>
+                    <td>{{ annoncesCopy.title }}</td>
+                    <td>{{ annoncesCopy.price }} €</td>
+                    <td>{{ annoncesCopy.phoneUser }}</td>
+                    <td><a href="{{ annoncesCopy.url }}">lien</a></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
